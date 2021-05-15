@@ -38,10 +38,16 @@
     "question": 3,
     "description": "My loved one...",
     "options": {
-      "one": { "score": 0, "text": "Can eat on his/her own" },
-      "two": { "score": 3, "text": "Can eat on his/her own with some help" },
-      "three": { "score": 8, "text": "Needs to be fed" },
-      "four": { "score": 16, "text": "Needs to be tube-fed" }
+      "one": { "score": 0, "text": "Can go to the toilet by himself/herself" },
+      "two": {
+        "score": 3,
+        "text": "Is able to say that he/she needs to go to the toilet but needs help getting there"
+      },
+      "three": { "score": 8, "text": "Needs a commode or bedpan or urinal" },
+      "four": {
+        "score": 16,
+        "text": "Is not able to hold his/her bowels and bladder and requires diapers or a catheter"
+      }
     }
   },
   {
