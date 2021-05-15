@@ -1,0 +1,101 @@
+[
+  {
+    "key": "q1",
+    "question": 1,
+    "description": "My loved one...",
+    "options": {
+      "one": "Doesn't need help moving around",
+      "two": "Requires some help or a mobility aid to move around",
+      "three": "Is mostly in bed and needs help to adjust himself/herself in bed",
+      "four": "Is bedbound and unable to communicate or move"
+    }
+  },
+  {
+    "key": "q2",
+    "question": 2,
+    "description": "My loved one, assuming meals are already prepared...",
+    "options": {
+      "one": "Can eat on his/her own",
+      "two": "Can eat on his/her own with some help",
+      "three": "Needs to be fed",
+      "four": "Needs to be tube-fed"
+    }
+  },
+  {
+    "key": "q3",
+    "question": 3,
+    "description": "My loved one...",
+    "options": {
+      "one": "Can eat on his/her own",
+      "two": "Can eat on his/her own with some help",
+      "three": "Needs to be fed",
+      "four": "Needs to be tube-fed"
+    }
+  },
+  {
+    "key": "q4",
+    "question": 4,
+    "description": "My loved one...",
+    "options": {
+      "one": "Can brush teeth, shower, put on a change of clothes by himself/herself",
+      "two": "Needs some help or just someone to supervise doing some of the above",
+      "three": "Needs someone to brush his/her teeth, shower and put on a change of clothes",
+      "four": "Is not able to get out of bed and thus needs someone to help with all of the above while in the bed"
+    }
+  },
+  {
+    "key": "q5",
+    "question": 5,
+    "description": "My loved one...",
+    "options": {
+      "one": "Has daily oral or topical medicines only",
+      "two": "Has daily injections (e.g. insulin) and the above",
+      "three": "Has daily physiotherapy and all of the above",
+      "four": "Has daily special treatments (e.g. use of oxygen machine or ventilator) and all of the above"
+    }
+  },
+  {
+    "key": "q6",
+    "question": 6,
+    "description": "My loved one says that he/she feels lonely...",
+    "options": {
+      "one": "Never",
+      "two": "1 - 3 times a week",
+      "three": "4 - 6 times a week",
+      "four": "Daily"
+    }
+  },
+  {
+    "key": "q7",
+    "question": 7,
+    "description": "My loved one suffers from confusion (e.g. getting lost, losing things, forgetting where he/she is)...",
+    "options": {
+      "one": "Never",
+      "two": "1 - 3 times a week",
+      "three": "4 - 6 times a week",
+      "four": "Daily"
+    }
+  },
+  {
+    "key": "q8",
+    "question": 8,
+    "description": "My loved one has mental health problems diagnosed by a psychiatrist (hallucinations, delusions, anxiety, depression), and it affects his/her life...",
+    "options": {
+      "one": "My loved one does not have any mental health problems",
+      "two": "A bit",
+      "three": "Quite a lot",
+      "four": "A lot and very unmanageable"
+    }
+  },
+  {
+    "key": "q9",
+    "question": 9,
+    "description": "My loved one has behavioural challenges (e.g. restless, disruptive, uncooperative)...",
+    "options": {
+      "one": "Never",
+      "two": "1 - 3 times a week",
+      "three": "4 - 6 times a week",
+      "four": "Daily"
+    }
+  }
+]
