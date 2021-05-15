@@ -8,21 +8,43 @@ const Question = (props) => {
           <h1>Question {props.question}:</h1>
           <h2>{props.description}</h2>
 
-          <button name={props.question} value="1" onClick={props.handleForm}>
+          <button
+            className="button-option"
+            name={props.question}
+            value="1"
+            onClick={props.handleForm}
+          >
             {props.options.one}
           </button>
-          <button name={props.question} value="2" onClick={props.handleForm}>
+          <button
+            className="button-option"
+            name={props.question}
+            value="2"
+            onClick={props.handleForm}
+          >
             {props.options.two}
           </button>
-          <button name={props.question} value="3" onClick={props.handleForm}>
+          <button
+            className="button-option"
+            name={props.question}
+            value="3"
+            onClick={props.handleForm}
+          >
             {props.options.three}
           </button>
-          <button name={props.question} value="4" onClick={props.handleForm}>
+          <button
+            className="button-option"
+            name={props.question}
+            value="4"
+            onClick={props.handleForm}
+          >
             {props.options.four}
           </button>
-          <button value={props.question} onClick={props.nextQn}>
-            Next Question
-          </button>
+          {props.question !== 1 && (
+            <button value={props.question} onClick={props.prevQn}>
+              Previous Question
+            </button>
+          )}
         </div>
       )}
     </React.Fragment>

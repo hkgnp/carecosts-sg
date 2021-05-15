@@ -3,7 +3,23 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   color: white;
+}
+
+.container {
+  width: 360px;
+}
+
+.button-option {
+  display: block;
+  width: 100%;
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  border-style: dashed;
+
+  font-size: 18px;
 }

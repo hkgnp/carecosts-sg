@@ -5,9 +5,7 @@ import Question from './Question';
 const Questions = () => {
   const [loaded, setLoaded] = useState(false);
   const [questions, setQuestions] = useState({});
-  const [answers, setAnswers] = useState({
-    q1: '',
-  });
+  const [answers, setAnswers] = useState({});
   const [displayQn, setDisplayQn] = useState(1);
 
   useEffect(() => {
@@ -23,21 +21,23 @@ const Questions = () => {
       ...answers,
       [e.target.name]: e.target.value,
     });
+    setDisplayQn(parseInt(e.target.name) + 1);
   };
 
-  const nextQn = (e) => {
-    setDisplayQn(parseInt(e.target.value) + 1);
+  const prevQn = (e) => {
+    setDisplayQn(parseInt(e.target.value) - 1);
   };
 
   return (
-    <div>
+    <div className="container">
       {loaded &&
         questions.map((q) => (
           <React.Fragment>
             <Question
-              key={q.key}
+              key={q.qnumber}
               handleForm={handleForm}
-              nextQn={nextQn}
+              prevQn={prevQn}
+              qnumber={q.qnumber}
               question={q.question}
               description={q.description}
               options={q.options}
