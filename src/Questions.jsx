@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Question from './Question';
+import Summary from './Summary';
 
 const Questions = () => {
   const [loaded, setLoaded] = useState(false);
@@ -28,23 +29,31 @@ const Questions = () => {
     setDisplayQn(parseInt(e.target.value) - 1);
   };
 
+  const getTotalCount = () => {
+    let i = 1;
+    let count = 0;
+    while (i < 10) {
+      count = count + parseInt(answers[i]);
+      i++;
+    }
+    return count;
+  };
+
   return (
     <div className="container">
       {loaded &&
         questions.map((q) => (
-          <React.Fragment>
-            <Question
-              key={q.qnumber}
-              handleForm={handleForm}
-              prevQn={prevQn}
-              qnumber={q.qnumber}
-              question={q.question}
-              description={q.description}
-              options={q.options}
-              displayQn={displayQn}
-            />
-          </React.Fragment>
+          <Question
+            key={q.qnumber}
+            handleForm={handleForm}
+            prevQn={prevQn}
+            question={q.question}
+            description={q.description}
+            options={q.options}
+            displayQn={displayQn}
+          />
         ))}
+      {displayQn === 10 && <Summary getTotalCount={getTotalCount} />}
     </div>
   );
 };
