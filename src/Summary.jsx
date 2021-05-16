@@ -1,6 +1,9 @@
 import React from 'react';
 import Basket1 from './Basket1';
-import Rotate from 'react-reveal/Rotate';
+import Basket2 from './Basket2';
+import Basket3 from './Basket3';
+import Basket4 from './Basket4';
+import { Rotate } from 'react-awesome-reveal';
 
 const Summary = (props) => {
   const score = props.getTotalCount();
@@ -9,11 +12,11 @@ const Summary = (props) => {
     if (score < 7) {
       return <Basket1 />;
     } else if (score < 25) {
-      return <p>$1000</p>;
+      return <Basket2 />;
     } else if (score < 49) {
-      return <p>$2000</p>;
+      return <Basket3 />;
     } else {
-      return <p>$5000</p>;
+      return <Basket4 />;
     }
   };
 

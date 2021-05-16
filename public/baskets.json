@@ -1,0 +1,58 @@
+{
+  "basket1": [
+    {
+      "item": "Motorised scooter",
+      "description": "To help with movement",
+      "frequency": "Once-off",
+      "cost": "1200"
+    },
+    {
+      "item": "Medical expenses",
+      "description": "For treatment",
+      "frequency": "Monthly",
+      "cost": "200"
+    }
+  ],
+  "basket2": [
+    {
+      "item": "Motorised scooter",
+      "description": "To help with movement",
+      "frequency": "Once-off",
+      "cost": "1200"
+    },
+    {
+      "item": "Medical expenses",
+      "description": "For treatment",
+      "frequency": "Monthly",
+      "cost": "200"
+    }
+  ],
+  "basket3": [
+    {
+      "item": "Motorised scooter",
+      "description": "To help with movement",
+      "frequency": "Once-off",
+      "cost": "1200"
+    },
+    {
+      "item": "Medical expenses",
+      "description": "For treatment",
+      "frequency": "Monthly",
+      "cost": "200"
+    }
+  ],
+  "basket4": [
+    {
+      "item": "Motorised scooter",
+      "description": "To help with movement",
+      "frequency": "Once-off",
+      "cost": "1200"
+    },
+    {
+      "item": "Medical expenses",
+      "description": "For treatment",
+      "frequency": "Monthly",
+      "cost": "200"
+    }
+  ]
+}
