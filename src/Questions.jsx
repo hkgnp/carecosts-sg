@@ -29,6 +29,7 @@ const Questions = () => {
     setDisplayQn(parseInt(e.target.value) - 1);
   };
 
+  // Used to calculate score
   const getTotalCount = () => {
     let i = 1;
     let count = 0;
