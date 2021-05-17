@@ -9,8 +9,8 @@ const Basket4 = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get('baskets.json');
-      setItems(response.data.basket4);
+      const response = await axios.get('https://carecosts-sg.herokuapp.com/');
+      setItems(response.data[0].baskets.basket4);
       setLoaded(true);
     })();
   }, []);

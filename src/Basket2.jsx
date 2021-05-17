@@ -9,8 +9,8 @@ const Basket2 = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get('baskets.json');
-      setItems(response.data.basket2);
+      const response = await axios.get('https://carecosts-sg.herokuapp.com/');
+      setItems(response.data[0].baskets.basket2);
       setLoaded(true);
     })();
   }, []);
@@ -28,8 +28,8 @@ const Basket2 = () => {
             />
           ))}
           <p className="mb-4 p-4 text-light">
-            Your loved one is generally well, and other than the usual medical
-            follow-ups, the following services/ items may be useful for you.
+            Your loved one may need some support and may have difficulties
+            living alone.
           </p>
         </Fade>
       )}

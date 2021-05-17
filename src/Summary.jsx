@@ -38,7 +38,7 @@ const Summary = (props) => {
           doctor to refer you to one.
         </p>
       </div>
-      <div className="block bg-green-200 text-black rounded-bl-lg rounded-br-lg p-0">
+      <div className="block bg-blue-900 text-white rounded-bl-lg rounded-br-lg p-0">
         <div className="mb-5">{calculateCosts(score)}</div>
       </div>
     </Rotate>
