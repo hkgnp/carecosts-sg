@@ -1,40 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Fade } from 'react-awesome-reveal';
-import Item from './Item';
+import React from 'react';
+import Basket from './Basket';
 
 const Basket4 = () => {
-  const [loaded, setLoaded] = useState(false);
-  const [items, setItems] = useState({});
-
-  useEffect(() => {
-    (async () => {
-      const response = await axios.get('https://carecosts-sg.herokuapp.com/');
-      setItems(response.data[0].baskets.basket4);
-      setLoaded(true);
-    })();
-  }, []);
-
-  return (
-    <React.Fragment>
-      {loaded && (
-        <Fade up>
-          {items.map((i) => (
-            <Item
-              frequency={i.frequency}
-              item={i.item}
-              description={i.description}
-              cost={i.cost}
-            />
-          ))}
-          <p className="mb-4 p-4 text-light">
-            Your loved one is generally well, and other than the usual medical
-            follow-ups, the following services/ items may be useful for you.
-          </p>
-        </Fade>
-      )}
-    </React.Fragment>
-  );
+  const basket4 = 'basket4';
+  return <Basket basketNo={basket4} />;
 };
 
 export default Basket4;
