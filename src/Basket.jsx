@@ -12,7 +12,7 @@ const Basket = (props) => {
     (async () => {
       //api
       const response = await axios.get('https://carecosts-sg.herokuapp.com/');
-      setItems(response.data[0][baskets][props.basketNo]);
+      setItems(response.data[0].baskets[props.basketNo]);
 
       //local
       // const response = await axios.get('baskets.json');
