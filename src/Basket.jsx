@@ -11,13 +11,13 @@ const Basket = (props) => {
   useEffect(() => {
     (async () => {
       //api
-      //   const response = await axios.get('https://carecosts-sg.herokuapp.com/');
-      //   setItems(response.data[0][baskets][props.basketNo]);
-      //   setLoaded(true);
+      const response = await axios.get('https://carecosts-sg.herokuapp.com/');
+      setItems(response.data[0][baskets][props.basketNo]);
 
       //local
-      const response = await axios.get('baskets.json');
-      setItems(response.data[props.basketNo]);
+      // const response = await axios.get('baskets.json');
+      // setItems(response.data[props.basketNo]);
+
       setLoaded(true);
     })();
   }, [props.basketNo]);
