@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 const Item = (props) => {
   return (
@@ -10,7 +10,16 @@ const Item = (props) => {
           </span>
         </p>
         <p>{props.item}</p>
-        <p className="text-xs">{props.description}</p>
+        <p className="text-xs whitespace-pre-wrap">
+          {props.description.split('\\r').map((value, index) => {
+            return (
+              <Fragment key={index}>
+                {value}
+                <br />
+              </Fragment>
+            );
+          })}
+        </p>
       </div>
       <div className="font-semibold bg-green-400 rounded flex items-center justify-center w-20 h-12">
         <p>${props.cost}</p>
