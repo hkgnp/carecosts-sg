@@ -3,7 +3,7 @@ import Basket1 from './Basket1';
 import Basket2 from './Basket2';
 import Basket3 from './Basket3';
 import Basket4 from './Basket4';
-import { Rotate } from 'react-awesome-reveal';
+import { Fade } from 'react-awesome-reveal';
 
 const Summary = (props) => {
   const score = props.getTotalCount();
@@ -21,10 +21,10 @@ const Summary = (props) => {
   };
 
   return (
-    <Rotate right>
-      <div className="block bg-green-500 rounded-tl-lg rounded-tr-lg p-12">
-        <h1 className="font-semibold text-5xl mb-8">Summary</h1>
-        <p className="mb-5">
+    <Fade right>
+      <div className="block bg-green-500 rounded-tl-lg rounded-tr-lg p-10">
+        <h1 className="font-semibold text-5xl mb-5">Summary</h1>
+        <p className="mb-0">
           Thank you for taking the time to do the quick survey. A breakdown of
           the{' '}
           <strong>
@@ -41,7 +41,7 @@ const Summary = (props) => {
       <div className="block bg-blue-900 text-white rounded-bl-lg rounded-br-lg p-0">
         <div className="mb-5">{calculateCosts(score)}</div>
       </div>
-    </Rotate>
+    </Fade>
   );
 };
 
