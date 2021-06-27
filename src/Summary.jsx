@@ -32,11 +32,11 @@ const Summary = (props) => {
           </strong>{' '}
           estimated costs are below.
         </p>
-        <p className="text-xs">
+        {/* <p className="text-xs">
           Not all the items below will apply, so speak to your Medical Social
           Worker for further details. If you do not have one, please ask your
           doctor to refer you to one.
-        </p>
+        </p> */}
       </div>
       <div className="block bg-blue-900 text-white rounded-bl-lg rounded-br-lg p-0">
         <div className="mb-5">{calculateCosts(score)}</div>
