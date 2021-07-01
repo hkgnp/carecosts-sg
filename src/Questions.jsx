@@ -17,6 +17,7 @@ const Questions = () => {
     })();
   }, []);
 
+  // The function below takes the answers provided by the user and to add it to the "answers" state. After all the questions, you would have an object of all the answers (defined by the points associated with each answer) within the "answers" state. The getTotalCount function calculates all the points per question to get the total score. This score is proceesed within the component called "Summary".
   const handleForm = (e) => {
     setAnswers({
       ...answers,
