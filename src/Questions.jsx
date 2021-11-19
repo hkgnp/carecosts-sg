@@ -11,9 +11,13 @@ const Questions = () => {
 
   useEffect(() => {
     (async () => {
-      await axios.get('https://carecosts-sg-api.herokuapp.com/');
-      const response = await axios.get('qns.json');
-      setQuestions(response.data);
+      await Promise.all([
+        axios.get('https://carecosts-sg-api.herokuapp.com/'),
+        axios.get('qns.json'),
+      ]).then((responses) => {
+        const [response1, response2] = responses;
+      });
+      setQuestions(response2.data);
       setLoaded(true);
     })();
   }, []);
