@@ -11,6 +11,7 @@ const Questions = () => {
 
   useEffect(() => {
     (async () => {
+      await axios.get('https://carecosts-sg-api.herokuapp.com/');
       const response = await axios.get('qns.json');
       setQuestions(response.data);
       setLoaded(true);
