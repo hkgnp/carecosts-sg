@@ -16,6 +16,7 @@ const Questions = () => {
         axios.get('qns.json'),
       ]).then((responses) => {
         const [response1, response2] = responses;
+        console.log(response1);
         setQuestions(response2.data);
       });
       setLoaded(true);
