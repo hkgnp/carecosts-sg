@@ -16,8 +16,8 @@ const Questions = () => {
         axios.get('qns.json'),
       ]).then((responses) => {
         const [response1, response2] = responses;
+        setQuestions(response2.data);
       });
-      setQuestions(response2.data);
       setLoaded(true);
     })();
   }, []);
