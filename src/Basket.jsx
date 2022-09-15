@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import { Fade } from 'react-awesome-reveal';
-import Item from './Item';
-import MoreInfo from './MoreInfo';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import Item from "./Item";
+import MoreInfo from "./MoreInfo";
 
 const Basket = (props) => {
   const [loaded, setLoaded] = useState(false);
@@ -11,14 +10,14 @@ const Basket = (props) => {
   useEffect(() => {
     (async () => {
       //api
-      const response = await axios.get(
-        'https://carecosts-sg-api.herokuapp.com/'
-      );
-      setItems(response.data[0].baskets[props.basketNo]);
+      //const response = await axios.get(
+      //  'https://carecosts-sg-api.herokuapp.com/'
+      //);
+      //setItems(response.data[0].baskets[props.basketNo]);
 
-      //local
-      // const response = await axios.get('baskets.json');
-      // setItems(response.data[props.basketNo]);
+      //local;
+      const response = await axios.get("baskets.json");
+      setItems(response.data[props.basketNo]);
 
       setLoaded(true);
     })();
@@ -27,7 +26,7 @@ const Basket = (props) => {
   return (
     <React.Fragment>
       {loaded && (
-        <Fade>
+        <React.Fragment>
           {items.map((i) => (
             <Item
               key={i.item}
@@ -38,7 +37,7 @@ const Basket = (props) => {
             />
           ))}
           <MoreInfo />
-        </Fade>
+        </React.Fragment>
       )}
     </React.Fragment>
   );

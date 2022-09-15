@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Fade } from 'react-awesome-reveal';
-import Item from './Item';
+import React, { useState, useEffect } from "react";
+import Item from "./Item";
+import axios from "axios";
 
 const MoreInfo = () => {
   const [loaded, setLoaded] = useState(false);
@@ -11,10 +10,10 @@ const MoreInfo = () => {
   useEffect(() => {
     (async () => {
       // Using API
-      const response = await axios.get(
-        'https://carecosts-sg-api.herokuapp.com/'
-      );
-      setSpecialItems(response.data[0].specialitems);
+      //const response = await axios.get(
+      //  "https://carecosts-sg-api.herokuapp.com/"
+      //);
+      //setSpecialItems(response.data[0].specialitems);
       setLoaded(true);
     })();
   }, []);
@@ -27,7 +26,7 @@ const MoreInfo = () => {
   return (
     <React.Fragment>
       <p className="px-4 mt-8 pb-8">
-        Depending on the medical condition, your loved one may need{' '}
+        Depending on the medical condition, your loved one may need{" "}
         <span onClick={readMore} className="underline cursor-pointer">
           one or more of the following equipment or services
         </span>
@@ -36,7 +35,7 @@ const MoreInfo = () => {
       {readMoreDiv && (
         <React.Fragment>
           {loaded && (
-            <Fade>
+            <React.Fragment>
               {specialItems.map((i) => (
                 <Item
                   key={i.item}
@@ -46,7 +45,7 @@ const MoreInfo = () => {
                   cost={i.cost}
                 />
               ))}
-            </Fade>
+            </React.Fragment>
           )}
         </React.Fragment>
       )}

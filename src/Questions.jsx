@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import Question from './Question';
-import Summary from './Summary';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import Question from "./Question";
+import Summary from "./Summary";
 
 const Questions = () => {
   const [loaded, setLoaded] = useState(false);
@@ -11,10 +11,9 @@ const Questions = () => {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get('qns.json');
+      const response = await axios.get("qns.json");
       setQuestions(response.data);
       setLoaded(true);
-      await axios.get('https://carecosts-sg-api.herokuapp.com/');
     })();
   }, []);
 
