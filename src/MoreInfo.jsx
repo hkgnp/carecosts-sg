@@ -9,11 +9,8 @@ const MoreInfo = () => {
 
   useEffect(() => {
     (async () => {
-      // Using API
-      //const response = await axios.get(
-      //  "https://carecosts-sg-api.herokuapp.com/"
-      //);
-      //setSpecialItems(response.data[0].specialitems);
+      const response = await axios.get("qns.json");
+      setSpecialItems(response.data[0].specialitems);
       setLoaded(true);
     })();
   }, []);

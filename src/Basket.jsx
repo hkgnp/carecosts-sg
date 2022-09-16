@@ -9,15 +9,9 @@ const Basket = (props) => {
 
   useEffect(() => {
     (async () => {
-      //api
-      //const response = await axios.get(
-      //  'https://carecosts-sg-api.herokuapp.com/'
-      //);
-      //setItems(response.data[0].baskets[props.basketNo]);
-
       //local;
       const response = await axios.get("baskets.json");
-      setItems(response.data[props.basketNo]);
+      setItems(response.data.baskets[props.basketNo]);
 
       setLoaded(true);
     })();
